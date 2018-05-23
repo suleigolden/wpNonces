@@ -1,5 +1,4 @@
 <?php
-
 namespace WpNonces;
 
 class Nonces{

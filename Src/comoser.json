@@ -1,0 +1,21 @@
+{
+  "name": "suleigolden/wpNonces",
+  "description": "OOP package that serves the functionality working with WordPress Nonces.",
+  "authors": [
+    {
+      "name": "Suleiman Ahamed Mamman",
+      "email": "suleimamman@gmail.com",
+      "website": "https://thelastcodebender.com/",
+      "role": "Full Stack Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "phpunit/phpunit": "7.1.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "WpNonces": "src/"
+    }
+  }
+}
