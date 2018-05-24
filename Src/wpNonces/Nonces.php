@@ -2,6 +2,20 @@
 namespace WpNonces;
 
 class Nonces{
+
+    /** @var string|int the action the nonce is created for */
+    protected $action;
+	/**
+     * Class constructor.
+     *
+     * @param injecting (passing) the dependencies
+     */
+    public function __construct($action = -1)
+    {
+        $this->action = $action;
+    
+	}
+
 	/**
 	*Create a nonce
 	*@param string $action value of nonce action.
@@ -12,7 +26,7 @@ class Nonces{
 		return substr(md5( $action ), -15, 10 );
     }
     /**
-	*Create a nonce
+	*Verify a nonce
 	*@param string $nonce value of nonce Nonce.
 	*@return string $action Optional. Action value. Default value -1..
 	*@return boolean this function will return boolean 'true' if the nonces is valid, else return false.
@@ -24,6 +38,15 @@ class Nonces{
             } else {
                 return false;
             }
+    }
+    /**
+	*Add nonce to URL 
+	*@param string $URL URL to add the nonce created.
+	*@return string $action Name to assigned to nonce created
+	*@return boolean this function to Add nonce to URL actions.
+	*/
+	function get_wp_nonce_url($URL, $action) {
+         return wp_nonce_url($URL, $action);
     }
     
 
