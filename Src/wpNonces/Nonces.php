@@ -79,5 +79,5 @@ class Nonces{
 	function wp_check_admin_referer($action, $param_query) {
          return check_admin_referer($action, $param_query);
     }
- 
+
 }
