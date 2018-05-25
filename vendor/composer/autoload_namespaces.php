@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'WpNonces' => array($baseDir . '/src'),
+    'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
 );
