@@ -49,7 +49,8 @@
        $url="admin/update-student.php?post=7";
 	   $complete_url = $nonce_Action->get_wp_nonce_url( $url, 'update-student_'.$post->ID );
    </p>
-
+<h3>NOTE</h3>
+<p>You can just Uncomment the below action to run every action in the tests/test.php file</p>
 </div>
 
 
